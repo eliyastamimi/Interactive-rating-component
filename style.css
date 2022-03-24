@@ -17,6 +17,11 @@ body {
   font-size: 15px;
 }
 
+.main__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .container {
   -ms-transform: translate(-50%, -50%);
   background-color: var(--netural-dark-blue);
@@ -25,10 +30,19 @@ body {
   left: 50%;
   margin: 0;
   padding: 35px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 410px;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 330px;
+    height: 360px;
+    padding: 0px;
+    padding-bottom: 25px;
+  }
 }
 
 .icon__star {
@@ -38,19 +52,50 @@ body {
   margin-bottom: 35px;
   padding: 15px;
 }
+
+@media screen and (min-width: 375px) {
+  .icon__star {
+    margin: 20px;
+    width: 15px;
+    height: 15px;
+  }
+}
 h2 {
   color: var(--netural-white);
 }
 
+@media screen and (min-width: 375px) {
+  h2 {
+    margin-top: 0;
+    margin-left: 25px;
+  }
+}
 p {
   color: var(--netural-medium-grey);
   line-height: 1.5;
   width: 324px;
 }
 
+@media screen and (min-width: 375px) {
+  p {
+    width: 270px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 0;
+    font-size: 13.5px;
+  }
+}
 .rate__box {
   margin-bottom: 35px;
   margin-top: 35px;
+}
+
+@media screen and (min-width: 375px) {
+  .rate__box {
+    padding: 35px 24px 25px 24px;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
 }
 .rate__number {
   background-color: hsl(213, 17%, 21%);
@@ -65,19 +110,29 @@ p {
   width: 55px;
 }
 
+@media screen and (min-width: 375px) {
+  .rate__number {
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+  }
+  .one {
+    margin: 0;
+  }
+}
+
 .rate__number:hover {
-  
-  background-color: var(--netural-medium-grey);
+  background-color: var(--primary-orange);
   cursor: pointer;
   transition: 0.04s;
 }
 
 .rate__number:active {
-  background-color: var(--primary-orange);
+  background-color: var(--netural-medium-grey);
   color: var(--netural-white);
 }
 .rate__number:focus {
-  background-color: var(--primary-orange);
+  background-color: var(--netural-medium-grey);
   color: var(--netural-white);
 }
 .btn {
@@ -95,6 +150,15 @@ p {
   transform: translate(-50%, -50%);
 }
 
+@media screen and (min-width: 375px) {
+  .btn {
+    width: 280px;
+    height: 45px;
+    margin-top: 0;
+    text-align: center;
+    padding: 0;
+  }
+}
 .btn:hover {
   background-color: var(--netural-white);
   color: var(--primary-orange);
@@ -102,10 +166,12 @@ p {
   transition: 0.04s;
 }
 .attribution {
-  bottom: 0;
   font-size: 11px;
-  position: fixed;
   text-align: center;
+  color: var(--netural-white);
+  width: 100%;
+  position: fixed;
+  bottom: -0;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
